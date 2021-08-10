@@ -1,17 +1,22 @@
 <script>
-  import { Route } from 'tinro'
+  import { Route, router } from 'tinro'
   import ExpandingCards from './ExpandingCards.svelte'
   import Home from './Home.svelte'
+  import ProgressSteps from './ProgressSteps.svelte'
+
+  router.mode.hash()
 </script>
 
 <nav>
   <a href="/">Home</a>
   <a href="/expanding">Expanding Cards</a>
+  <a href="/progress">Progress Steps</a>
 </nav>
 
 <main>
   <Route path="/"><Home /></Route>
   <Route path="/expanding"><ExpandingCards /></Route>
+  <Route path="/progress"><ProgressSteps /></Route>
 </main>
 
 <style>
